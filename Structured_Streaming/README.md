@@ -15,13 +15,10 @@ If you use Kafka as Source or Sink -
 ```
 
 ## Description
-Script will display all instructions like -
-
-  How to start the Source say Kafka so that Spark can read it as a Stream.
-  
-  Sample data to be used as an input to the Source.
-  
-  Where to Check the Ouput and what command to use.
+Script will display all instructions like:
+- How to start the Source say Kafka so that Spark can read it as a Stream.
+- Sample data to be used as an input to the Source.
+- Where to Check the Ouput and what command to use.
   
 ## Usage
 ```
@@ -82,8 +79,8 @@ INFO: Use below Command to Start the Consumer !!
 
 Console 2: Follow the instructions displayed on Console 1.
 
-    - Start the Kafka Producer using - $KAFKA_HOME/bin/kafka-console-producer.sh --broker-list apache-spark.hadoop.com:9092 --topic mytopic
-    - Copy Paste the sample records shown above.
+  - Start the Kafka Producer using - $KAFKA_HOME/bin/kafka-console-producer.sh --broker-list apache-spark.hadoop.com:9092 --topic mytopic
+  - Copy Paste the sample records shown above.
 
 ```
 [root@apache-spark ~]$  $KAFKA_HOME/bin/kafka-console-producer.sh --broker-list apache-spark.hadoop.com:9092 --topic mytopic
