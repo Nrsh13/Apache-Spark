@@ -14,6 +14,15 @@ If you use Kafka as Source or Sink -
     #2. kafka-clients-2.0.0.jar can be found at $KAFKA_HOME/libs
 ```
 
+## Description
+Script will display all instructions like -
+
+  How to start the Source say Kafka so that Spark can read it as a Stream.
+  
+  Sample data to be used as an input to the Source.
+  
+  Where to Check the Ouput and what command to use.
+  
 ## Usage
 ```
 [root@apache-spark ~]$ spark-submit socket-Dir-Kafka-Structured-Streaming.py help
@@ -38,6 +47,7 @@ If you use Kafka as Source or Sink -
 ```
 
 ## Example
+Console 1: Run the main Script and go through the Instructions provided.
 ```
 [root@apache-spark ~]$  spark-submit --jars spark-sql-kafka-0-10_2.11-2.3.1.jar,$KAFKA_HOME/libs/kafka-clients-2.0.0.jar socket-Dir-Kafka-Structured-Streaming.py kafka kafka
 
@@ -71,8 +81,9 @@ INFO: Use below Command to Start the Consumer !!
 ```
 
 Console 2: Follow the instructions displayed on Console 1.
-    Start the Kafka Producer using - $KAFKA_HOME/bin/kafka-console-producer.sh --broker-list apache-spark.hadoop.com:9092 --topic mytopic
-    Copy Paste the sample records shown above.
+
+    - Start the Kafka Producer using - $KAFKA_HOME/bin/kafka-console-producer.sh --broker-list apache-spark.hadoop.com:9092 --topic mytopic
+    - Copy Paste the sample records shown above.
 
 ```
 [root@apache-spark ~]$  $KAFKA_HOME/bin/kafka-console-producer.sh --broker-list apache-spark.hadoop.com:9092 --topic mytopic
@@ -88,8 +99,9 @@ Console 2: Follow the instructions displayed on Console 1.
 
 ```
 Console 3: Follow the Instructions displayed on Console 1.
-  Start the Kafka Consumer using - $KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server apache-spark.hadoop.com:9092 --topic mytopic_clean
-  Expect the streamed output having valid Email Addresses.
+  
+  - Start the Kafka Consumer using - $KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server apache-spark.hadoop.com:9092 --topic mytopic_clean
+  - Expect the streamed output having valid Email Addresses.
 
 ```
 [root@apache-spark ~]$ $KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server apache-spark.hadoop.com:9092 --topic mytopic_clean
@@ -98,5 +110,6 @@ Console 3: Follow the Instructions displayed on Console 1.
 {"is_email_valid":true,"fname":"Russell","lname":"Wright","email":"Russell_Wright@nbc.com","mobile":9848316824,"passport_expiry_year":2022,"email_check":"pass"}
 {"is_email_valid":true,"fname":"Kyle","lname":"kumar","email":"Kyle_kumar@hotmail.com","mobile":9837699819,"passport_expiry_year":2022,"email_check":"pass"}
 ```
+
 ## Contact
 nrsh13@gmail.com
